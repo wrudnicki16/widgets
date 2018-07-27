@@ -1,0 +1,25 @@
+#clock {
+  width: 65%;
+}
+
+#clock ul {
+  font-family: 'Quantico', sans-serif;
+  background-color: orange;
+  padding: 20px;
+  border: 2px solid #000;
+  color: #fff;
+  font-size: 28px;
+}
+
+#clock h1 {
+  align-self: flex-start;
+}
+
+#clock li {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li {
+  list-style: none;
+}
