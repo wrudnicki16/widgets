@@ -13,8 +13,9 @@ class Tab extends React.Component {
       return (
         <h1 className="tab" 
             key={`tab-${i}`}
-            onClick={() => this.setState({ activeIdx: i}) }>
-            d.title</h1>
+            onClick={() => this.setState({ activeIdx: i}) }
+            id={i === this.state.activeIdx ? "active" : ""}>
+            {d.title}</h1>
       );
     }));
     let tabContent = data[this.state.activeIdx]["content"];
