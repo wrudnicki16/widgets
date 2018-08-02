@@ -6,9 +6,27 @@
   border: 2px solid black;
   padding: 5px 10px;
   font-weight: 400;
-  height: 124px;
+  height: 260px;
 }
 
 #weather {
   width: 65%;
+}
+
+#weather-info li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#weather-info span {
+  margin: 10px 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ccc;
+  border: 1px solid #000;
+}
+
+#weather-info ul {
+  padding-left: 0;
 }

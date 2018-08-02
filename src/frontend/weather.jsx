@@ -20,22 +20,29 @@ class Weather extends React.Component {
           if (req.status === 200) {
             let json = JSON.parse(req.responseText);
             console.log(json);
-            console.log(json['weather']);
+            let temp = json["main"]["temp"];
+            let low = json["main"]["temp_min"];
+            let high = json["main"]["temp_max"];
+
+            temp = Math.round(((temp - 273.15) * 1.8) + 32);
+            low = Math.round(((low - 273.15) * 1.8) + 32);
+            high = Math.round(((high - 273.15) * 1.8) + 32);
+
+
             this.setState(() => {
               return (
                 {"content": (
                 <ul>
                   <li>
-                    <span>Weather: {json["weather"][0]["main"]}</span>
                     <span>City: {json["name"]}</span>
-                    <span>Coords: {`lat: ${json["coord"]["lat"]} lon: ${json["coord"]["lon"]}`}</span>
+                    <span>Weather: {json["weather"][0]["main"]}</span>
                   </li>
                   <li>
-                    <span>Temp: {json["main"]["temp"]}</span>
-                    <span>Pressure: {json["main"]["pressure"]}</span>
-                    <span>Humidity: {json["main"]["humidity"]}</span>
-                    <span>Low: {json["main"]["temp_min"]}</span>
-                    <span>High: {json["main"]["temp_max"]}</span>
+                    <span>Temp: {`${temp}˚`}</span>
+                    <span>Low: {`${low}˚`}</span>
+                    <span>High: {`${high}˚`}</span>
+                    <span>Pressure: {`${json["main"]["pressure"]} hPa`}</span>
+                    <span>Humidity: {`${json["main"]["humidity"]}%`}</span>
                   </li>
                 </ul>
                 )}
@@ -54,7 +61,7 @@ class Weather extends React.Component {
         }
       };
 
-      req.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${Math.round(position.coords.latitude)}&lon=${Math.round(position.coords.longitude)}&APPID=${APIKey}&mode=json`, true);
+      req.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&APPID=${APIKey}&mode=json`, true);
       req.send();
     });
   }
