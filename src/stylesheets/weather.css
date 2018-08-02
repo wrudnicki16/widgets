@@ -1,0 +1,14 @@
+#weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  border: 2px solid black;
+  padding: 5px 10px;
+  font-weight: 400;
+  height: 124px;
+}
+
+#weather {
+  width: 65%;
+}
