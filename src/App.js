@@ -3,6 +3,7 @@ import './App.css';
 import Clock from './frontend/clock';
 import Tab from './frontend/tab';
 import Weather from './frontend/weather';
+import AutoComplete from './frontend/autocomplete';
 
 class App extends Component {
   render() {
@@ -18,6 +19,9 @@ class App extends Component {
           ]}/>
           
         </div>
+        <AutoComplete data={[
+          "Joe", "Jeff", "John", "Jocelyn", "Justin", "Jessica", "Justine"
+        ]} />
       </div>
     );
   }
