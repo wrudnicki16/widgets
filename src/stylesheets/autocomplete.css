@@ -1,0 +1,28 @@
+.small-widgets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-widgets > div {
+  margin: 25px;
+}
+
+.autocomplete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: plum;
+  height: 30vh;
+  border: 2px solid #000;
+  padding: 24px 0;
+}
+
+.autocomplete input {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.autocomplete form {
+  text-align: center;
+}

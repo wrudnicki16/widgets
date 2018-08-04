@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../stylesheets/autocomplete.css';
 class AutoComplete extends React.Component {
   constructor() {
     super();
@@ -34,14 +34,17 @@ class AutoComplete extends React.Component {
 
     return (
       <div>
-        <form>
-          <input onChange={(e) => this.handleChange(e)} 
-                 type="text"
-                 value={this.state.inputVal} />
-        </form>
-        <ul> 
-          {namesList}
-        </ul>
+        <h1>Autocomplete</h1>
+        <div className="autocomplete">
+          <form>
+            <input onChange={(e) => this.handleChange(e)} 
+                  type="text"
+                  value={this.state.inputVal} />
+          </form>
+          <ul> 
+            {namesList}
+          </ul>
+        </div>
       </div>
     );
   }

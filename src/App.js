@@ -11,17 +11,17 @@ class App extends Component {
       <div className="App">
         <Clock />
         <Weather />
-        <div>
+        <div className="small-widgets">
           <Tab data={[
             { "title": "one", "content": "I am the worst :(" },
             { "title": "two", "content": "I am the best!"},
             { "title": "third", "content": "I've got a hairy chest" }
           ]}/>
           
+          <AutoComplete data={[
+            "Joe", "Jeff", "John", "Jocelyn", "Justin", "Jessica", "Justine"
+          ]} />
         </div>
-        <AutoComplete data={[
-          "Joe", "Jeff", "John", "Jocelyn", "Justin", "Jessica", "Justine"
-        ]} />
       </div>
     );
   }
