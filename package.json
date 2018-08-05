@@ -8,6 +8,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "react": "^16.4.1",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
     "webpack": "^4.16.2",
